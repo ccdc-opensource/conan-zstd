@@ -1,0 +1,14 @@
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: ccdc-3rd-party/conan-azure-devops
+      ref: refs/heads/development
+
+extends:
+  template: third-party-library-all-platforms-from-conan-center.yml@templates
+  parameters:
+    package: zstd
+    package_version: 1.4.5
+    source_repository: public-conan-center
+    destination_repository: ccdc-3rdparty-conan
